@@ -1,13 +1,15 @@
 ﻿// Group.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
 
-#include <iostream>
 #include "Subject.h"
-using namespace std;
+
 int main()
 {
-    std::cout << "Hello World!\n";
-
+    setlocale(LC_ALL, "rus");
+    Subject subject("subject.txt");
+    subject.printNames();
+    cout << endl;
+    subject.printNames(2);
 
 }
 
