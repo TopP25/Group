@@ -1,15 +1,14 @@
 ﻿// Group.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
 
-#include "Subject.h"
+#include "Student.h"
 
 int main()
 {
     setlocale(LC_ALL, "rus");
-    Subject subject("subject.txt");
-    subject.printNames();
-    cout << endl;
-    subject.printNames(2);
+
+    Student student("Alex", "subject.txt");
+    student.printStudent();
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
