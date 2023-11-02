@@ -10,11 +10,6 @@ int main()
     subject.printNames();
     cout << endl;
     subject.printNames(2);
-    srand(time(0));
-    for (size_t i = 0; i < 100; i++)
-    {
-        cout << rand() % 4 + 2 << endl;
-    }
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"

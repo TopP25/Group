@@ -5,7 +5,7 @@
 
 class Student {
 	string name;
-	Subject* subject;
+	Subject subject;
 	hash_map<string, vector<int>> jornal;
 public:
 	Student(string name, string name_file){
@@ -21,9 +21,26 @@ public:
 			while (!file_in.eof())
 			{
 				file_in >> n;
-				vector<int> estimation;
-
-				jornal[n]
+				subject.setName(n);
+				jornal[n] = estimation(5);
+			}
+		}
+	}
+	Student(string name_file) {
+		ifstream file_in(name_file);
+		if (!file_in.is_open()) {
+			cout << "File name: " << name_file << " EROR!";
+		}
+		file_in >> name;
+		string n;
+		while (!file_in.eof())
+		{
+			file_in >> n;
+			while (!file_in.eof())
+			{
+				file_in >> n;
+				subject.setName(n);
+				jornal[n] = estimation(5);
 			}
 		}
 	}
@@ -32,8 +49,20 @@ public:
 		vector<int> est;
 		for (size_t i = 0; i < t; i++)
 		{
-			est.push_back(rand() % 5 + 2);
+			est.push_back(rand() % 4 + 2);
 		}
+		return est;
+	}
+
+	void printStudent() {
+		cout << "Предметы: " << endl;
+		subject.printNames();
+		cout << "Hash_map: " << endl;
+
+	}
+
+	~Student() {
+		subject.~Subject();
 	}
 
 };

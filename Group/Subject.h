@@ -8,6 +8,8 @@ using namespace std;
 class Subject {
 	vector<string> names;
 public:
+	Subject() {
+	}
 	Subject(string name_file) {
 		ifstream file_in(name_file);
 		if (!file_in.is_open()) {
@@ -22,6 +24,9 @@ public:
 	}
 	vector<string> getName() {
 		return names;
+	}
+	void setName(string name) {
+		names.push_back(name);
 	}
 	void printNames() {
 		for (auto s : names) {
