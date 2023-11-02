@@ -28,7 +28,8 @@ public:
 
 class Student
 {
-
+	string name;
+	Subject subject("math");
 public:
 
 };
